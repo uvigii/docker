@@ -1,0 +1,11 @@
+version: "3"
+services:
+  php:
+    container_name: sf4_ub18
+    build: './'
+    networks:
+      - frontend
+    ports:
+      - "9000:9000"
+networks:
+  frontend:
