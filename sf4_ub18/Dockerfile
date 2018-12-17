@@ -3,8 +3,8 @@ FROM ubuntu:latest
 #
 MAINTAINER Milan Enev <milan@mreji.net>
 #ENV WORKDIR "/var/www/project"
-ADD install_packages.sh /tmp/
-RUN /bin/bash /tmp/install_packages.sh
+ADD install_packages.sh /root/
+RUN /bin/bash /root/install_packages.sh
 
 WORKDIR ${WORKDIR}
 
