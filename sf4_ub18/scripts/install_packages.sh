@@ -8,7 +8,7 @@ locale-gen en_US.UTF-8 en_GB.UTF-8 de_DE.UTF-8 es_ES.UTF-8 fr_FR.UTF-8 it_IT.UTF
 apt-get install -yq --no-install-recommends tzdata
 apt-get install -yq --no-install-recommends git curl zlib1g-dev unzip openssh-client ca-certificates
 apt-get install -yq --no-install-recommends \
-			php-cli php-fpm 
+			php-cli php-fpm \
 			php-mysql php-mysqli php7.2-sqlite3 php-pgsql php-mongodb \
 			php-curl php-zip php-bcmath php-bz2 php-gd php-intl php-imagick php-mbstring \
 			php-xml  php-json php-xsl \
@@ -19,7 +19,5 @@ apt-get install -yq --no-install-recommends \
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 #composer create-project symfony/website-skeleton my-project
 #
-docker-service enable syslog 
-docker-service enable cron
-docker-run-bootstrap
-docker-image-cleanup
+apt-get clean
+rm -rf /var/lib/apt/lists/*
