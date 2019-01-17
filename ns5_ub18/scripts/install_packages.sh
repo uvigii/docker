@@ -1,5 +1,8 @@
 #!/bin/bash
 export DEBIAN_FRONTEND=noninteractive
+apt-get update  -yq
+apt-get install -yq --no-install-recommends apt-utils
+apt-get dist-upgrade -yq
 git submodule update --init --recursive
 wget -q http://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz
 tar -xzf node-v${NODE_VERSION}-linux-x64.tar.gz
