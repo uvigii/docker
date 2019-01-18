@@ -17,11 +17,11 @@ apt-get -y install lib32stdc++6 lib32z1 --no-install-recommends
 
 # NodeJS
 curl -sL https://deb.nodesource.com/setup_10.x | bash - 
-apt-get update
-apt-get -y install nodejs --no-install-recommends
+apt-get update -q
+apt-get -yq install nodejs --no-install-recommends
 
 # NativeScript
-npm install -g nativescript
+npm install -g nativescript --unsafe-perm
 tns error-reporting disable
 
 
