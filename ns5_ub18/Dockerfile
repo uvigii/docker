@@ -1,4 +1,5 @@
-FROM runmymind/docker-android-sdk:ubuntu-standalone 
+FROM ubuntu/latest 
+#FROM runmymind/docker-android-sdk:ubuntu-standalone 
 #
 MAINTAINER Milan Enev <milan@mreji.net>
 #
