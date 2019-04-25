@@ -14,7 +14,7 @@ apt-get install -yq --no-install-recommends \
 			php-xml  php-json php-xsl \
 			php-ldap php-soap php-xmlrpc \
 			php-imap php-bcmath php-bz2 \
-			php-apcu php-memcached php-redis
+			php-apcu php-memcached php-redis php-apc
 #
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 #composer create-project symfony/website-skeleton my-project
