@@ -15,13 +15,15 @@ useradd -ms /bin/bash nativescript
 apt-get -yq install apt-transport-https unzip git curl usbutils gnupg wget --no-install-recommends
 
 # JAVA
-apt-get -yq install default-jdk --no-install-recommends
+apt-get -yq install openjdk-8-jdk --no-install-recommends
+export JAVA_HOME=$(update-alternatives --query javac | sed -n -e 's/Best: *\(.*\)\/bin\/javac/\1/p')
 
 # Android build requirements
 apt-get -y install lib32stdc++6 lib32ncurses5 lib32z1 --no-install-recommends
 
 # Android SDK
-mkdir -p "$ANDROID_HOME" .android
+mkdir .android
+mkdir -p "$ANDROID_HOME"
 cd "$ANDROID_HOME" 
 curl -o sdk.zip $SDK_URL \
  && unzip sdk.zip \
@@ -30,8 +32,8 @@ curl -o sdk.zip $SDK_URL \
 
 wget $GRADLE_URL -O gradle.zip \
  && unzip gradle.zip \
- && mv gradle-4.5.1 gradle \
  && rm gradle.zip \
+ && mv gradle-* gradle \
  && mkdir .gradle
 
 $ANDROID_HOME/tools/bin/sdkmanager "tools" "emulator" "platform-tools" "platforms;android-28" "build-tools;28.0.3" "extras;android;m2repository" "extras;google;m2repository"
