@@ -25,6 +25,8 @@ npm install -g nativescript --unsafe-perm
 tns error-reporting disable
 
 # Android SDK
+export ANDROID_HOME=/opt/android-sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 $ANDROID_HOME/tools/bin/sdkmanager "tools" "platform-tools" "platforms;android-26" "build-tools;26.0.2" "extras;android;m2repository" "extras;google;m2repository" > /dev/null
 
 apt-get clean
