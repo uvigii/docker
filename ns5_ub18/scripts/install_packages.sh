@@ -12,7 +12,7 @@ apt-get dist-upgrade -yq
 useradd -ms /bin/bash nativescript
 
 # Utilities
-apt-get -yq install apt-transport-https unzip git curl usbutils gnupg --no-install-recommends
+apt-get -yq install apt-transport-https unzip git curl usbutils gnupg wget --no-install-recommends
 
 # JAVA
 apt-get -yq install default-jdk --no-install-recommends
