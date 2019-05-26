@@ -24,8 +24,6 @@ apt-get -yq install nodejs --no-install-recommends
 npm install -g nativescript --unsafe-perm
 tns error-reporting disable
 
-
-
 # Android SDK
 $ANDROID_HOME/tools/bin/sdkmanager "tools" "platform-tools" "platforms;android-26" "build-tools;26.0.2" "extras;android;m2repository" "extras;google;m2repository" > /dev/null
 
