@@ -8,7 +8,10 @@ if [ $APP_ENV = "dev" ]; then
     echo "[Xdebug]"                  >> /etc/php/7.2/fpm/99-xdebug.ini
     echo "xdebug.remote_enable=true" >> /etc/php/7.2/fpm/99-xdebug.ini
     echo "xdebug.remote_port=5902"   >> /etc/php/7.2/fpm/99-xdebug.ini
-    echo "xdebug.remote_host=host.docker.internal"  >> /etc/php/7.2/fpm/99-xdebug.ini   
+    #echo "xdebug.default_enable=1"   >>
+    #echo "xdebug.remote_autostart = 1"
+    #echo "xdebug.remote_handler = dbgp" >>
+    echo "xdebug.remote_host=localhost"  >> /etc/php/7.2/fpm/99-xdebug.ini   
 elif [ $APP_ENV = "test" ]; then
     echo "."
 else
