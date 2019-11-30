@@ -2,14 +2,14 @@
 ### ns5_ub18
 {N} NativeScript 5
 ###  sf4_ub18
-#### for Symfony 4 based on ubuntu 18.04 
-####Features:
-- from ubuntu:latest
-- nginx and fpm
-- same beavior as with ubuntu server
-- only 290MB
-- all required and recomended php modules
-- all processes are running with www-data
+#### for Symfony 4 based on ubuntu 18.04
+#### Features:
+- from ubuntu:latest | proven and tested, glibc packages
+- nginx and fpm | similar to production env
+- only 290MB | official php docker image is 500+MB
+- all required and recommended php modules | great compability
+- running with www-data 
+
 
 ### .gitlab-ci.yml usage
 ```yml
